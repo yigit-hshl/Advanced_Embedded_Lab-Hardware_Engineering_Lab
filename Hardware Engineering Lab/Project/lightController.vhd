@@ -373,6 +373,7 @@ when Y12_R34_1256_G3478_b =>
 	elsif((delay_yellow3s_12 = '1') and (delay_red3s_34 = '1')) then -- normal flow of the system if none of the buttons pressed
 		next_state <= G12_3478_R34_1256;
 	end if;
+when others => next_state  <= G12_3478_R34_1256;
 end case;
 end process;
 
@@ -381,10 +382,11 @@ process(clk)
 begin
 if(rising_edge(clk)) then
 	if(clk_en1s='1') then
+		delay_count <= delay_count + x"1";
 		if(red_en10s_12='1' or red_en3s_12='1' or red_en10s_34='1' or red_en3s_34='1' or
 		   green_en10s_12='1' or green_en3s_12='1' or green_en10s_34='1' or green_en3s_34='1' or 
 		   yellow_en3s_12='1' or yellow_en3s_34='1') then
-			delay_count <= delay_count + x"1";
+			--delay_count <= delay_count + x"1";
 			if((delay_count = x"9") and red_en10s_12 = '1') then
 				-- car light delays
 				delay_red10s_12 <= '1';
