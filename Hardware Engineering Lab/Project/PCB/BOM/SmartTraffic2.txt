@@ -1,0 +1,10 @@
+﻿Partlist exported from C:/Users/Asus/Documents/EAGLE/projects/SmartTraffic/V1/SmartTraffic.sch at 6/21/2022 9:18 PM
+
+Qty Value                           Device                          Package                        Parts                                                                                                                                                 Description                          
+32  220                             0.22OHM-0805-1/4W-1%            0805                           R1 to R32 0.22Ω resistor                       
+1   EP4CE22E22C8N                   EP4CE22E22C8N                   FBGA256_THIN_WIRE-BOND-A:1.55_ U1                                                                                                                                                                                         
+12  GREEN                           LED-GREEN0603                   LED-0603                       D1 to D12                                                                                     Green SMD LED                        
+4   MOMENTARY-SWITCH-SPST-SMD-4.5MM MOMENTARY-SWITCH-SPST-SMD-4.5MM TACTILE_SWITCH_SMD_4.5MM       S1, S2, S3, S4                                                                                                                Momentary Switch (Pushbutton) - SPST 
+1   OSCILLATORSMD-5X3               OSCILLATORSMD-5X3               OSCILLATOR-SMD-5X3.2           Y1                                                                                                                                                    Oscillators (Generic)                
+12  RED                             LED-RED0603                     LED-0603                       D13 to D24                                                                                    Red SMD LED                          
+4   Yellow                          LED-YELLOW0603                  LED-0603                       D25, D26, D27, D28                                                                            Yellow SMD LED                       
