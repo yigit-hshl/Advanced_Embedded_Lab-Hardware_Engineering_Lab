@@ -22,10 +22,10 @@ int lastState = 1;             // State variable
 
 /************************* Wi-Fi Client Setup *****************************/
 
-const char* ssid     = "se.101";     // your network SSID
-const char* password = "qqqqqqqq9";  // your network password
+const char* ssid     = "SECRET_SSID";     // your network SSID
+const char* password = "SECRET_PASS";  // your network password
 
-char myIPAddress[20];
+char myIPAddress[194.95.*.**];
 
 /************************* MQTT Client Config ********************************/
 
@@ -48,16 +48,7 @@ int totalCyclesCount = 0;
 
 
 /********************* MQTT Broker Callback Function **************************
- /*!
-    @brief  Process MQTT Messages (subscription)
-    @param  topic
-            the topic the message arrived on (const char[])
-    @param  payload
-            the message payload (byte array)
-    @param  length
-            the length of the message payload (unsigned int)
-    @return nothing.
-*/
+ 
 
 void callback(char* topic, byte* payload, unsigned int length) {
 
