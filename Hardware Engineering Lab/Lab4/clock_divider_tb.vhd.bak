@@ -1,0 +1,49 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+ENTITY tb_clock_div IS
+END tb_clock_div;
+ 
+ARCHITECTURE behavior OF tb_clock_div IS 
+    -- Clock divider 
+    COMPONENT clock_div
+    PORT(
+         clk_in : IN  std_logic;
+         clk_out : OUT  std_logic
+        );
+    END COMPONENT;
+   --Inputs
+   signal clk_50 : std_logic := '0';
+
+  --Outputs
+   signal clk_1s : std_logic;
+
+   -- Clock period definitions
+   constant clk_50_period : time := 20 ns;
+ 
+BEGIN
+ 
+ -- Instantiate the VHDL clock divider 
+   uut: clock_div PORT MAP (
+          clk_in => clk_50,
+          clk_out => clk_1s
+        );
+
+   -- creating clock
+   clk_50_process :process
+   begin
+  clk_50 <= '0';
+  wait for clk_50_period/2;
+  clk_50 <= '1';
+  wait for clk_50_period/2;
+   end process;
+
+   -- Stimulus process
+   stim_proc: process
+   begin  
+      wait for 100 ns; 
+      wait for clk_50_period*10;
+      wait;
+   end process;
+
+END;
